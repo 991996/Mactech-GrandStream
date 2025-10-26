@@ -1,0 +1,10 @@
+# تشغيل إعادة الكتابة
+RewriteEngine On
+
+# إخفاء .html من الروابط
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# تحديد index.html كصفحة افتراضية
+DirectoryIndex index.html
